@@ -1,0 +1,49 @@
+ps_id: "esg-carbon-accounting-copilot"
+
+entry:
+  type: "python"
+  callable: "graph:run_graph"
+  arguments:
+    activity.text: "jd_raw_text"
+  constants:
+    job_url: ""
+    resume_text: "Backend engineer. Python, APIs, and SQL."
+
+input:
+  schema:
+    type: "object"
+    required:
+      - "jd_raw_text"
+      - "job_url"
+      - "resume_text"
+    properties:
+      jd_raw_text:
+        type: "string"
+      job_url:
+        type: "string"
+      resume_text:
+        type: "string"
+  mapping:
+    activity.text: "jd_raw_text"
+
+output:
+  schema:
+    type: "object"
+    required:
+      - "cold_email"
+    properties:
+      cold_email:
+        type: "string"
+      rewritten_bullets:
+        type: "string"
+      error:
+        type: "string"
+  mapping:
+    report.text: "$.cold_email"
+
+normalizers: {}
+
+tools: []
+
+requirements:
+  frameworks: []
