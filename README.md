@@ -1,4 +1,4 @@
-# 🚀 Job Application Autopilot — Walkthrough
+ # 🚀 Job Application Autopilot — Walkthrough
 
 A multi-agent pipeline that takes a **job posting URL** and your **resume PDF**, then runs 4 sequential AI agents to produce **tailored resume bullets** and a **cold recruiter email**.
 
